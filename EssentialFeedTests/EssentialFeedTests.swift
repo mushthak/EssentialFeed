@@ -13,7 +13,7 @@ class EssentialFeedTests: XCTestCase {
     func test_init_doesNotRequestDataFromURL() {
         let (_, client) = makeSUT()
 
-        XCTAssertNil(client.requestedURL)
+        XCTAssertTrue(client.requestedURLs.isEmpty)
     }
 
     func test_load_requestsDataFromUrl() {
@@ -22,7 +22,7 @@ class EssentialFeedTests: XCTestCase {
 
         sut.load()
 
-        XCTAssertEqual(client.requestedURL, url)
+        XCTAssertEqual(client.requestedURLs, [url])
     }
 
     func test_loadTwice_requestsDataFromUrlTwice() {
