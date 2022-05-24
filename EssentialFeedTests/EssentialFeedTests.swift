@@ -51,7 +51,8 @@ class EssentialFeedTests: XCTestCase {
 
         samples.enumerated().forEach { index, code in
             expect(sut, toCompleWithResult: .failure(.invalidData), when: {
-                client.complete(withStatusCode: code,index: index)
+                let json = makeItemsJson([])
+                client.complete(withStatusCode: code, data: json,index: index)
             })
         }
 
@@ -151,7 +152,7 @@ class EssentialFeedTests: XCTestCase {
         }
 
         func complete(withStatusCode code: Int,
-                      data: Data = Data(),
+                      data: Data,
                       index: Int = 0) {
             let response = HTTPURLResponse(url: messages[index].url,
                                            statusCode: code,
