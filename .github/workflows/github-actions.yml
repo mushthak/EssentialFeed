@@ -1,4 +1,4 @@
-name: CI- Test feed feature 
+name: CI-macOS
 
 on:
   push:
