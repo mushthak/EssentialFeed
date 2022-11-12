@@ -25,7 +25,7 @@
 		29D69DF4291969BE00F51A64 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69DF3291969BE00F51A64 /* LocalFeedLoader.swift */; };
 		29D69DF629196ABF00F51A64 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69DF529196ABF00F51A64 /* FeedStore.swift */; };
 		29D69DF8291FECC400F51A64 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69DF7291FECC400F51A64 /* RemoteFeedItem.swift */; };
-		29D69DFA291FECE400F51A64 /* LocalFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69DF9291FECE400F51A64 /* LocalFeedItem.swift */; };
+		29D69DFA291FECE400F51A64 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69DF9291FECE400F51A64 /* LocalFeedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		29D69DF3291969BE00F51A64 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		29D69DF529196ABF00F51A64 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		29D69DF7291FECC400F51A64 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
-		29D69DF9291FECE400F51A64 /* LocalFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedItem.swift; sourceTree = "<group>"; };
+		29D69DF9291FECE400F51A64 /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +194,7 @@
 			children = (
 				29D69DF3291969BE00F51A64 /* LocalFeedLoader.swift */,
 				29D69DF529196ABF00F51A64 /* FeedStore.swift */,
-				29D69DF9291FECE400F51A64 /* LocalFeedItem.swift */,
+				29D69DF9291FECE400F51A64 /* LocalFeedImage.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 				2581ACD5281717FD000224CB /* FeedLoader.swift in Sources */,
 				29D69DF8291FECC400F51A64 /* RemoteFeedItem.swift in Sources */,
 				2548A637282AC00F00FB3834 /* RemoteFeedLoader.swift in Sources */,
-				29D69DFA291FECE400F51A64 /* LocalFeedItem.swift in Sources */,
+				29D69DFA291FECE400F51A64 /* LocalFeedImage.swift in Sources */,
 				29D69DF629196ABF00F51A64 /* FeedStore.swift in Sources */,
 				29D69DF4291969BE00F51A64 /* LocalFeedLoader.swift in Sources */,
 				253CE5E4285C3B9A009FBD70 /* HTTPClient.swift in Sources */,
