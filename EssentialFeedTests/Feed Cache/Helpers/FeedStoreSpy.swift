@@ -18,6 +18,7 @@ internal class FeedStoreSpy: FeedStore {
     
     var deletionCompletions = [DeletionCompletion]()
     var insertionCompletions = [InsertionCompletion]()
+    var retrivalCompletions = [RetrivalCompletion]()
     
     private(set) var receivedMessages = [ReceivedMessage]()
 
@@ -47,8 +48,13 @@ internal class FeedStoreSpy: FeedStore {
         insertionCompletions[index](nil)
     }
     
-    func retrieve() {
+    func retrieve(completion: @escaping RetrivalCompletion) {
+        retrivalCompletions.append(completion)
         receivedMessages.append(.retrieve)
+    }
+    
+    func completeRetrieveal(with error:Error, at index: Int = 0) {
+        retrivalCompletions[index](error)
     }
     
 }
