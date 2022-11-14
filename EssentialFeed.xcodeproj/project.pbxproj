@@ -28,6 +28,7 @@
 		29D69DFA291FECE400F51A64 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69DF9291FECE400F51A64 /* LocalFeedImage.swift */; };
 		29D69DFE292000FA00F51A64 /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69DFD292000FA00F51A64 /* LoadFeedFromCacheUseCaseTests.swift */; };
 		29D69E012920032D00F51A64 /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69E002920032D00F51A64 /* FeedStoreSpy.swift */; };
+		29D69E032922225F00F51A64 /* ValidateFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D69E022922225F00F51A64 /* ValidateFeedFromCacheUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		29D69DF9291FECE400F51A64 /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
 		29D69DFD292000FA00F51A64 /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		29D69E002920032D00F51A64 /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
+		29D69E022922225F00F51A64 /* ValidateFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				29D69DFF2920031B00F51A64 /* Helpers */,
 				257D97A92885BDDF00B3F746 /* CacheFeedUseCaseTests.swift */,
 				29D69DFD292000FA00F51A64 /* LoadFeedFromCacheUseCaseTests.swift */,
+				29D69E022922225F00F51A64 /* ValidateFeedFromCacheUseCaseTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				29D69E012920032D00F51A64 /* FeedStoreSpy.swift in Sources */,
 				257D97AA2885BDDF00B3F746 /* CacheFeedUseCaseTests.swift in Sources */,
 				29D69DFE292000FA00F51A64 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
+				29D69E032922225F00F51A64 /* ValidateFeedFromCacheUseCaseTests.swift in Sources */,
 				256CFD0828619BCC0033D808 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
