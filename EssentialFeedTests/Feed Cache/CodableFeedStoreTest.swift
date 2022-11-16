@@ -129,8 +129,10 @@ class CodableFeedStoreTest: XCTestCase {
     
     // MARK: - Helpers
 
-    private func  makeSUT() -> CodableFeedStore {
-        return CodableFeedStore()
+    private func  makeSUT(file: StaticString = #file, line: UInt = #line) -> CodableFeedStore {
+        let sut = CodableFeedStore()
+        trackForMemoryLeak(sut)
+        return sut
     }
     
 }
