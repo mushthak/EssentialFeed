@@ -151,8 +151,8 @@ class CodableFeedStoreTest: XCTestCase {
     }
     
     func test_insert_deliversErrorOnInsertionError() {
-        let storeURL = URL(string: "invalid://store.url")
-        let sut = makeSUT(storeURL: storeURL)
+        let invalidStoreURL = URL(string: "invalid://store.url")
+        let sut = makeSUT(storeURL: invalidStoreURL)
         
         let feed = uniqueImageFeeds().local
         let insertionError = insert((feed: feed, timestamp: Date()), to: sut)
