@@ -40,6 +40,7 @@
 		29E1A99D2938C93300D991B3 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E1A99C2938C93300D991B3 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */; };
 		29E1A99F2938CADA00D991B3 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E1A99E2938CADA00D991B3 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
 		29E1A9A2293B82C600D991B3 /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E1A9A1293B82C600D991B3 /* CoreDataFeedStoreTests.swift */; };
+		29E1A9A4293B841F00D991B3 /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E1A9A3293B841F00D991B3 /* CoreDataFeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		29E1A99C2938C93300D991B3 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableInsertFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		29E1A99E2938CADA00D991B3 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		29E1A9A1293B82C600D991B3 /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
+		29E1A9A3293B841F00D991B3 /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				29D69DF529196ABF00F51A64 /* FeedStore.swift */,
 				29D69DF9291FECE400F51A64 /* LocalFeedImage.swift */,
 				29E1A9892926917000D991B3 /* CodableFeedStore.swift */,
+				29E1A9A3293B841F00D991B3 /* CoreDataFeedStore.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				253CE5E4285C3B9A009FBD70 /* HTTPClient.swift in Sources */,
 				2581ACD3281716CD000224CB /* FeedItem.swift in Sources */,
 				256CFD0A2861C8A90033D808 /* URLSessionHTTPClient.swift in Sources */,
+				29E1A9A4293B841F00D991B3 /* CoreDataFeedStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
