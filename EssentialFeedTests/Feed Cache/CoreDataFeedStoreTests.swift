@@ -8,43 +8,7 @@
 import XCTest
 import EssentialFeed
 
-class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpec {
-    
-    func test_retrieve_failureOnRetrievalError() {
-        
-    }
-    
-    func test_retrieve_hasNoSideEffectsOnFailure() {
-        
-    }
-    
-    func test_insert_deliversNoErrorOnEmptyCache() {
-        let sut = makeSUT()
-        
-        assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
-    }
-    
-    func test_insert_deliversNoErrorOnNonEmptyCache() {
-        let sut = makeSUT()
-        
-        assertThatInsertDeliversNoErrorOnNonEmptyCache(on: sut)
-    }
-    
-    func test_insert_deliversErrorOnInsertionError() {
-        
-    }
-    
-    func test_insert_hasNoSideEffectOnInsertionError() {
-        
-    }
-    
-    func test_delete_deliverErrorOnDeletionError() {
-        
-    }
-    
-    func test_delete_hasNoSideEffectOnDeletionError() {
-        
-    }
+class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpec {
     
     func test_retrive_deliversEmptyOnEmptyCache() {
         let sut = makeSUT()
@@ -68,6 +32,18 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpec {
         let sut = makeSUT()
         
         assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
+    }
+    
+    func test_insert_deliversNoErrorOnEmptyCache() {
+        let sut = makeSUT()
+        
+        assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
+    }
+    
+    func test_insert_deliversNoErrorOnNonEmptyCache() {
+        let sut = makeSUT()
+        
+        assertThatInsertDeliversNoErrorOnNonEmptyCache(on: sut)
     }
     
     func test_insert_overridesPreviouslyInsertedValues() {
@@ -107,7 +83,7 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpec {
     }
     
     // MARK: - Helpers
-
+    
     private func  makeSUT(storeURL: URL? = nil,file: StaticString = #file, line: UInt = #line) -> FeedStore {
         let storeBundle = Bundle(for: CoreDataFeedStore.self)
         let storeURL = URL(fileURLWithPath: "/dev/null")
