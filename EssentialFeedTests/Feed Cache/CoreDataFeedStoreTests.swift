@@ -53,7 +53,9 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpec {
     }
     
     func test_retrive_hasNoSideEffectsOnNonEmptyCache() {
+        let sut = makeSUT()
         
+        assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
     }
     
     func test_insert_overridesPreviouslyInsertedValues() {
