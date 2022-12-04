@@ -76,6 +76,12 @@ class CodableFeedStoreTest: XCTestCase, FailableFeedStoreSpec {
         assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
     }
     
+    func test_insert_deliversNoErrorOnNonEmptyCache() {
+        let sut = makeSUT()
+        
+        assertThatInsertDeliversNoErrorOnNonEmptyCache(on: sut)
+    }
+    
     func test_insert_deliversErrorOnInsertionError() {
         let invalidStoreURL = URL(string: "invalid://store.url")
         let sut = makeSUT(storeURL: invalidStoreURL)
