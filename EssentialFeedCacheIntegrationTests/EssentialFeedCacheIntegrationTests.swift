@@ -24,7 +24,7 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
     
     func test_load_deliversNoItemsOnEmptyCache() {
         let sut = makeSUT()
-                
+        
         expect(sut, toLoad:[])
     }
     
@@ -39,17 +39,17 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
     }
     
     func test_save_overridesItemsSavedOnASeparateInstance() {
-             let sutToPerformFirstSave = makeSUT()
-             let sutToPerformLastSave = makeSUT()
-             let sutToPerformLoad = makeSUT()
-             let firstFeed = uniqueImageFeeds().models
-             let latestFeed = uniqueImageFeeds().models
+        let sutToPerformFirstSave = makeSUT()
+        let sutToPerformLastSave = makeSUT()
+        let sutToPerformLoad = makeSUT()
+        let firstFeed = uniqueImageFeeds().models
+        let latestFeed = uniqueImageFeeds().models
         
-             save(firstFeed, with: sutToPerformFirstSave)
-             save(latestFeed, with: sutToPerformLastSave)
-
-             expect(sutToPerformLoad, toLoad: latestFeed)
-         }
+        save(firstFeed, with: sutToPerformFirstSave)
+        save(latestFeed, with: sutToPerformLastSave)
+        
+        expect(sutToPerformLoad, toLoad: latestFeed)
+    }
     
     
     // MARK: - Helpers
@@ -104,7 +104,7 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
     private func testSpecificStoreURL() -> URL {
         return cacheDirectory().appendingPathComponent("\(type(of: self)).store")
     }
-     
+    
     private func cacheDirectory() -> URL {
         return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
     }
