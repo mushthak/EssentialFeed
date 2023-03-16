@@ -37,18 +37,19 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vyY-ba-r28">
                                             <rect key="frame" x="20" y="17" width="353" height="576"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mSM-s6-ncZ" userLabel="Location Container">
-                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="36"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mSM-s6-ncZ" userLabel="Location Container">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mP5-t2-hZx">
-                                                            <rect key="frame" x="0.0" y="-3" width="24" height="42.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="-3" width="22" height="27"/>
                                                             <color key="tintColor" systemColor="systemGray2Color"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="56y-Nc-eJX"/>
+                                                            </constraints>
                                                             <imageReference key="image" image="mappin.and.ellipse" catalog="system" symbolScale="large"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-pb-bcR">
-                                                            <rect key="frame" x="30" y="0.0" width="67" height="36"/>
-                                                            <string key="text">Location, 
-Location</string>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cannon Street, London" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-pb-bcR">
+                                                            <rect key="frame" x="28" y="0.0" width="325" height="20.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -56,7 +57,7 @@ Location</string>
                                                     </subviews>
                                                 </stackView>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8C-aF-bdq" userLabel="Image Container">
-                                                    <rect key="frame" x="0.0" y="46" width="353" height="353"/>
+                                                    <rect key="frame" x="0.0" y="30.333333333333343" width="353" height="353"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jJO-aZ-W6D">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
@@ -77,7 +78,7 @@ Location</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3a-hd-GUl">
-                                                    <rect key="frame" x="0.0" y="409" width="349" height="167"/>
+                                                    <rect key="frame" x="0.0" y="393.33333333333331" width="349" height="182.66666666666669"/>
                                                     <string key="text">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,7 +86,7 @@ Location</string>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mSM-s6-ncZ" firstAttribute="width" secondItem="vyY-ba-r28" secondAttribute="width" multiplier="0.274788" id="OQd-fL-8a3"/>
+                                                <constraint firstItem="mSM-s6-ncZ" firstAttribute="width" secondItem="vyY-ba-r28" secondAttribute="width" id="OQd-fL-8a3"/>
                                                 <constraint firstItem="W8C-aF-bdq" firstAttribute="width" secondItem="vyY-ba-r28" secondAttribute="width" id="r5R-bR-ctJ"/>
                                             </constraints>
                                         </stackView>
