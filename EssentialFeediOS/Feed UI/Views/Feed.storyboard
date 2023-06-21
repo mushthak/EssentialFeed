@@ -20,7 +20,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label Error label Error label Error label Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZK-QK-ZXn">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZK-QK-ZXn">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,6 +28,7 @@
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="0.99951404330000004" green="0.41759261489999999" blue="0.4154433012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="GZK-QK-ZXn" secondAttribute="bottom" id="JMw-xk-QQf"/>
                                 <constraint firstItem="GZK-QK-ZXn" firstAttribute="leading" secondItem="hWg-de-PGB" secondAttribute="leading" id="cze-Ao-g32"/>
@@ -36,6 +37,7 @@
                             </constraints>
                             <connections>
                                 <outlet property="label" destination="GZK-QK-ZXn" id="LX6-PQ-b28"/>
+                                <outletCollection property="gestureRecognizers" destination="gUv-eT-xpz" appends="YES" id="Jy2-Eb-kt5"/>
                             </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="0Th-ZQ-C1f">
@@ -158,6 +160,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMT-cl-96M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gUv-eT-xpz">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="hWg-de-PGB" id="D3r-qB-jxV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="852.67175572519079" y="-29.577464788732396"/>
         </scene>
