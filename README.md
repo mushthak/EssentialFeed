@@ -175,11 +175,13 @@ Given the customer doesn't have connectivity
 
 ## Flowchart
 
-![Feed Loading Feature](feed_flowchart.png)
+![feed_flowchart](https://github.com/mushthak/EssentialFeed/assets/11793859/db9c7fea-9a18-4303-b350-632ada2d4d07)
+
 
 ## Architecture
 
-![Feed Loading Feature](feed_architecture.png)
+![feed_architecture](https://github.com/mushthak/EssentialFeed/assets/11793859/58d1b97e-7465-4417-b4c6-4bf49017cfcf)
+
 
 ## Model Specs
 
