@@ -88,6 +88,14 @@ final class ValidateFeedFromCacheUseCaseTests: XCTestCase {
         })
     }
     
+    func test_validateCache_succeedsOnEmptyCache() {
+        let (sut, store) = makeSUT()
+        
+        expect(sut, toCompleteWith: .success(()), when: {
+            store.completeRetrievealWithEmptyCache()
+        })
+    }
+    
     func test_validateCache_doesNotDeleteInvalidCacheAfterSUTHasBeenDeallocated() {
         let store = FeedStoreSpy()
         var sut:LocalFeedLoader?  = LocalFeedLoader(store: store, currentDate: Date.init)
