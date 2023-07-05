@@ -45,6 +45,13 @@
             BlueprintName = "EssentialFeediOS"
             ReferencedContainer = "container:EssentialFeed.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "29D76DF02A5491E900E64C41"
+            BuildableName = "EssentialApp.app"
+            BlueprintName = "EssentialApp"
+            ReferencedContainer = "container:EssentialApp/EssentialApp.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
@@ -89,6 +96,17 @@
                BuildableName = "EssentialFeediOSTests.xctest"
                BlueprintName = "EssentialFeediOSTests"
                ReferencedContainer = "container:EssentialFeed.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "29D76E1B2A54994900E64C41"
+               BuildableName = "EssentialAppTests.xctest"
+               BlueprintName = "EssentialAppTests"
+               ReferencedContainer = "container:EssentialApp/EssentialApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
