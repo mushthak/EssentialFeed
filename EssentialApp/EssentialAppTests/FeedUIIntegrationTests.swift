@@ -160,6 +160,10 @@ final class FeedUIIntegrationTests: XCTestCase {
         loader.completeImageLoadingWithError(at: 1)
         XCTAssertEqual(view0?.isShowingImageLoadingIndicator, false, "Expected no loading indicator state change for first view once second image loading completes with error")
         XCTAssertEqual(view1?.isShowingImageLoadingIndicator, false, "Expected no loading indicator for second view once second image loading completes with error")
+        
+        view1?.simulateRetryAction()
+        XCTAssertEqual(view0?.isShowingImageLoadingIndicator, false, "Expected no loading indicator state change for first view once second image loading completes with error")
+        XCTAssertEqual(view1?.isShowingImageLoadingIndicator, true, "Expected loading indicator state change for second view on retry action")
     }
     
     func test_feedImageView_rendersImageLoadedFromURL() {
@@ -203,6 +207,10 @@ final class FeedUIIntegrationTests: XCTestCase {
         loader.completeImageLoadingWithError(at: 1)
         XCTAssertEqual(view0?.isShowingRetryAction, false, "Expected no retry action state change for first view once second image loading completes with error")
         XCTAssertEqual(view1?.isShowingRetryAction, true, "Expected retry action for second view once second image loading completes with error")
+        
+        view1?.simulateRetryAction()
+        XCTAssertEqual(view0?.isShowingRetryAction, false, "Expected no retry action state change for first view on  second image retry")
+        XCTAssertEqual(view1?.isShowingRetryAction, false, "Expected no retry action for second view on retry")
     }
     
     func test_feedImageViewRetryButton_isVisibleOnInvalidImageData() {
@@ -316,7 +324,7 @@ final class FeedUIIntegrationTests: XCTestCase {
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedViewController, loader: LoaderSpy) {
         let loader = LoaderSpy()
-        let sut = FeedUIComposer.feedComposedWith(feedLoader: loader, imageLoader: loader)
+        let sut = FeedUIComposer.feedComposedWith(feedLoader: loader.loadPublisher, imageLoader: loader)
         trackForMemoryLeaks(loader, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, loader)
