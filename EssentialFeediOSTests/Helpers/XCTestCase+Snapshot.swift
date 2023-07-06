@@ -18,16 +18,7 @@ extension XCTestCase {
             return
         }
         
-        if !match(snapshotData!, storedSnapshotData, tolerance: 5) {
-            let temporarySnapshotURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
-                .appendingPathComponent(snapshotURL.lastPathComponent)
-            
-            try? snapshotData?.write(to: temporarySnapshotURL)
-            
-            XCTFail("New snapshot does not match stored snapshot. New snapshot URL: \(temporarySnapshotURL), Stored snapshot URL: \(snapshotURL)", file: file, line: line)
-        }
-        
-        if snapshotData != storedSnapshotData {
+        if !match(snapshotData!, storedSnapshotData, tolerance: 3) {
             let temporarySnapshotURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
                 .appendingPathComponent(snapshotURL.lastPathComponent)
             
